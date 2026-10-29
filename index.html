@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daniel &amp; Maria | 19.12.2026</title>
+<meta name="description" content="Daniel & Maria · 19.12.2026 · Vamos nos casar! Cerimônia civil no Cartório do Bacacheri, seguida de almoço em nossa casa, em Curitiba.">
+<meta property="og:title" content="Daniel & Maria">
+<meta property="og:description" content="19.12.2026 · Vamos nos casar!">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://danielkuiavski.github.io/casamento_D-M/">
+<meta property="og:image" content="https://danielkuiavski.github.io/casamento_D-M/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://danielkuiavski.github.io/casamento_D-M/">
+<meta name="theme-color" content="#F3EFE3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%23F3EFE3'/%3E%3Crect x='4' y='4' width='56' height='56' fill='none' stroke='%236B3038' stroke-width='1'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='24' fill='%236B3038'%3ED%C2%B7M%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Gilda+Display&family=Pinyon+Script&display=swap">
+
+<style>
+:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+/* Papelaria editorial: um envelope verde-oliva fechado com lacre vinho D & M abre a experiência;
+   ao romper o lacre, a aba abre, o cartão sobe e o convite em papel marfim se desdobra em uma coluna.
+   Vinho só em detalhes. Visual único (claro), como papel impresso. */
+:root{
+  color-scheme: light;
+  --paper:#F3EFE3;
+  --paper-warm:#ECE6D5;
+  --ink:#3A3A2E;
+  --ink-soft:#5E5E4C;
+  --olive:#6A6A53;
+  --olive-deep:#4F5140;
+  --olive-line:rgba(106,106,83,.38);
+  --env:#7A7E5C;
+  --env-dark:#686C4D;
+  --wine:#6B3038;
+  --wine-deep:#56262D;
+
+  --f-script:"Pinyon Script","Snell Roundhand","Apple Chancery",cursive;
+  --f-display:"Gilda Display","Didot","Bodoni 72",Georgia,serif;
+  --f-body:"EB Garamond",Garamond,"Times New Roman",Georgia,serif;
+
+  --measure:32rem;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--f-body);
+  font-size:1.125rem;
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+.grain{ /* grão leve de papel artesanal, aplicado como fundo (sem camada fixa) */
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .33 0 0 0 0 .25 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+body.grain{background-color:var(--paper)}
+.card.grain,.env-letter.grain{background-color:var(--paper)}
+.rsvp.grain{background-color:var(--paper-warm)}
+body.locked{overflow:hidden}
+svg{display:block}
+a{color:inherit}
+:focus-visible{outline:1px solid var(--wine);outline-offset:4px}
+
+.caps{font-family:var(--f-display);text-transform:uppercase;letter-spacing:.22em;font-size:.78rem;line-height:1.5}
+.script{font-family:var(--f-script);font-weight:400;line-height:1.05;color:var(--wine)}
+.muted{color:var(--ink-soft)}
+h1,h2,h3{font-weight:400;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+
+/* =================== ENVELOPE (abertura) =================== */
+.stage{
+  position:fixed;inset:0;z-index:20;overflow-y:auto;
+  min-height:100%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;
+  padding-block:3rem;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  text-align:center;
+  background:radial-gradient(90% 60% at 50% 45%,#F7F4EB 0%,var(--paper) 60%,var(--paper-warm) 100%);
+  transition:opacity 1.2s cubic-bezier(.45,0,.25,1),visibility 0s linear 1.2s;
+  will-change:opacity;
+}
+.stage.leaving{opacity:0;visibility:hidden;pointer-events:none}
+.stage-head{display:flex;flex-direction:column;gap:.35rem;color:var(--olive)}
+.stage-head .names{font-family:var(--f-script);font-size:2.4rem;color:var(--wine);line-height:1}
+.stage-head .caps{letter-spacing:.42em;padding-left:.42em;font-size:.74rem}
+
+.env{
+  position:relative;
+  width:min(100%,25rem);
+  aspect-ratio:3/2;
+  max-width:100%;
+  perspective:1400px;
+  cursor:pointer;
+  margin-top:3.5rem; /* espaço para o cartão subir */
+  -webkit-tap-highlight-color:transparent;
+}
+.env-shadow{position:absolute;inset:4% 3% 0;border-radius:4px;box-shadow:0 26px 34px -14px rgba(40,40,20,.32),0 3px 6px rgba(40,40,20,.12);pointer-events:none}
+.env-back{position:absolute;inset:0;border-radius:3px;background:var(--env-dark);overflow:hidden}
+.env-back svg,.env-front,.env-flap svg{width:100%;height:100%}
+.env-letter{
+  position:absolute;left:6%;right:6%;top:5%;height:88%;
+  background:var(--paper);
+  z-index:2;
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:9%;
+  transform:translate3d(0,0,0);
+  transition:transform 1.6s cubic-bezier(.33,0,.15,1) 1s;
+  will-change:transform;
+}
+.env-letter::before{content:"";position:absolute;inset:7px;border:1px solid var(--olive-line);pointer-events:none}
+.env-letter .mono{width:62px;height:42px;margin:0 0 .3rem}
+.env-letter .lead{font-family:var(--f-display);font-size:.95rem;letter-spacing:.08em}
+.env-letter .script{font-size:2.6rem;margin-top:-.2rem}
+.env-front{position:absolute;inset:0;z-index:3;pointer-events:none}
+.env-flap{
+  position:absolute;left:0;right:0;top:0;height:60%;
+  z-index:4;
+  transform-origin:50% 0;
+  transform-style:preserve-3d;
+  transform:rotateX(0deg);
+  transition:transform 1.15s cubic-bezier(.55,0,.25,1) .3s,z-index 0s linear .95s;
+  will-change:transform;
+}
+.env-flap .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.env-flap .face.inside{transform:rotateX(180deg)}
+.seal{
+  position:absolute;left:50%;top:60%;z-index:5;
+  width:78px;height:78px;margin:-39px 0 0 -39px;
+  padding:0;border:0;background:none;cursor:pointer;
+  transform:rotate(-7deg);
+  transition:transform .55s var(--ease),opacity .45s var(--ease);
+  will-change:transform,opacity;
+}
+.seal svg{width:100%;height:100%}
+.env:hover .seal{transform:rotate(-7deg) scale(1.05)}
+
+.env.open{cursor:default}
+.env.open .seal{opacity:0;transform:rotate(-20deg) scale(.6);pointer-events:none}
+.env.open .env-flap{transform:rotateX(180deg);z-index:1}
+.env.open .env-letter{transform:translate3d(0,-62%,0)}
+
+.hint{display:flex;flex-direction:column;align-items:center;gap:.7rem;color:var(--ink-soft)}
+.hint em{font-size:1.1rem}
+.hint .caps{color:var(--wine);font-size:.7rem;border-bottom:1px solid rgba(107,48,56,.35);padding-bottom:3px;background:none;border-top:0;border-left:0;border-right:0;cursor:pointer}
+.hint em{animation:breathe 4.5s ease-in-out infinite;will-change:opacity}
+.stage.opening .hint,.stage.opening .stage-head{opacity:0;transition:opacity .7s}
+.stage-head{transition:opacity .7s}
+
+/* =================== CONVITE =================== */
+.invite{position:relative}
+.cover{
+  display:grid;place-items:center;
+  padding-block:max(22px,4vh);
+  padding-left:max(14px,env(safe-area-inset-left,0px));
+  padding-right:max(14px,env(safe-area-inset-right,0px));
+  background-color:var(--env);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='190' viewBox='0 0 150 190'%3E%3Cg fill='none' stroke='%23F3EFE3' stroke-opacity='.1' stroke-width='.9' stroke-linecap='round'%3E%3Cpath d='M28 74C28 58 38 44 52 34C60 29 68 26 76 25C73 29 71 33 69 38C66 47 62 54 58 58C49 66 38 72 28 74Z'/%3E%3Cpath d='M28 74C34 80 48 78 58 58C55 70 52 82 48 94C44 106 39 114 34 120C31 108 30 92 28 74Z'/%3E%3Cpath d='M34 120C35 142 34 166 32 190'/%3E%3Cpath d='M120 160C111 150 105 134 108 116C110 104 118 94 128 88C131 102 134 120 132 136C131 146 126 154 120 160Z'/%3E%3Cpath d='M120 160C121 172 121 182 120 190M120 0C120 8 120 14 121 18'/%3E%3C/g%3E%3C/svg%3E");
+}
+.card{
+  position:relative;
+  width:min(100%,30rem);
+  background:var(--paper);
+  padding:3.25rem 1.75rem 19rem;
+  text-align:center;
+  overflow:hidden;
+  box-shadow:0 30px 50px -36px rgba(20,20,10,.55);
+}
+.card::before{
+  content:"";position:absolute;inset:10px;pointer-events:none;z-index:3;
+  border:1px solid var(--olive-line);
+  box-shadow:inset 0 0 0 3px var(--paper),inset 0 0 0 4px rgba(106,106,83,.22);
+}
+.card > *{position:relative;z-index:2}
+.card .wash{
+  position:absolute;inset:auto -20% -8% -20%;height:50%;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(40% 50% at 50% 80%,rgba(106,106,83,.13),transparent 70%),
+    radial-gradient(30% 30% at 30% 90%,rgba(106,106,83,.08),transparent 70%);
+}
+.mono{width:86px;height:58px;margin:0 auto 1.6rem}
+.cover-date{color:var(--olive);letter-spacing:.42em;font-size:.82rem;margin-bottom:1.4rem;padding-left:.42em}
+.cover-title{display:flex;flex-direction:column;align-items:center;gap:.1rem;margin-bottom:1.5rem}
+.cover-title .lead{font-family:var(--f-display);font-size:clamp(1.55rem,6.4vw,1.95rem);letter-spacing:.06em;color:var(--ink)}
+.cover-title .script{font-size:clamp(4rem,19vw,5.4rem);margin-top:-.25rem;padding-inline:.2em}
+.rule{width:44px;height:1px;background:var(--olive-line);margin:0 auto 1.4rem}
+.cover-text{font-style:italic;font-size:1.13rem;color:var(--ink-soft);max-width:18rem;margin:0 auto 2.1rem}
+.bouquet{
+  position:absolute;left:calc(50% - 110px);bottom:-26px;z-index:1;
+  width:220px;height:auto;
+  transform-origin:50% 100%;animation:sway 12s ease-in-out infinite;will-change:transform;
+  pointer-events:none;
+}
+
+
+/* botões */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6em;
+  min-height:50px;padding:.95rem 1.9rem .9rem;
+  font-family:var(--f-display);text-transform:uppercase;letter-spacing:.24em;font-size:.76rem;
+  text-decoration:none;cursor:pointer;
+  color:var(--wine);background:transparent;border:1px solid var(--wine);border-radius:0;
+  transition:background-color .7s var(--ease),color .7s var(--ease),letter-spacing .7s var(--ease);
+  -webkit-tap-highlight-color:transparent;
+}
+.btn:hover{background:var(--wine);color:var(--paper)}
+.btn.solid{background:var(--wine);color:var(--paper);padding-inline:2rem;min-height:56px;width:100%;max-width:21rem}
+.btn.solid:hover{background:var(--wine-deep)}
+.btn .arrow{display:inline-block;width:18px;height:1px;background:currentColor;position:relative;transition:width .7s var(--ease)}
+.btn .arrow::after{content:"";position:absolute;right:0;top:-3px;width:6px;height:6px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg)}
+.btn:hover .arrow{width:24px}
+.btn .down{display:inline-block;width:7px;height:7px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg) translateY(-2px)}
+.link{
+  font-family:var(--f-display);text-transform:uppercase;letter-spacing:.2em;font-size:.7rem;color:var(--olive);
+  text-decoration:none;border-bottom:1px solid var(--olive-line);padding-bottom:3px;transition:color .5s,border-color .5s;
+}
+.link:hover{color:var(--wine);border-color:var(--wine)}
+
+main{
+  padding-left:max(20px,env(safe-area-inset-left,0px));
+  padding-right:max(20px,env(safe-area-inset-right,0px));
+}
+section.leaf{
+  max-width:var(--measure);margin:0 auto;text-align:center;
+  padding-block:4.5rem 1rem;
+  display:flex;flex-direction:column;align-items:center;gap:1.4rem;
+}
+.sec-title{font-size:clamp(3rem,13vw,3.6rem);padding-inline:.2em}
+.eyebrow{color:var(--olive)}
+
+.divider{display:flex;align-items:center;gap:.7rem;margin-top:3.5rem;width:9rem}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--olive-line)}
+.divider i{width:5px;height:5px;background:var(--wine);transform:rotate(45deg);flex:none}
+
+.details{
+  position:relative;width:100%;
+  padding:2.6rem 1.4rem 2.4rem;
+  border:1px solid var(--olive-line);
+  display:flex;flex-direction:column;align-items:center;gap:1.1rem;
+}
+.details::before{content:"";position:absolute;inset:5px;border:1px solid rgba(106,106,83,.16);pointer-events:none}
+.when{display:flex;flex-direction:column;align-items:center;gap:.35rem}
+.when .day{font-family:var(--f-display);font-size:clamp(1.5rem,6vw,1.8rem);letter-spacing:.02em;line-height:1.2}
+.when .hour{font-style:italic;font-size:1.25rem;color:var(--ink-soft)}
+.hair{width:100%;max-width:9rem;height:1px;background:var(--olive-line)}
+.where{display:flex;flex-direction:column;align-items:center;gap:.2rem}
+.where .place{font-family:var(--f-display);text-transform:uppercase;letter-spacing:.18em;font-size:.95rem;color:var(--wine)}
+.where .addr{font-size:1.08rem;color:var(--ink-soft)}
+.actions{display:flex;flex-direction:column;align-items:center;gap:1.1rem;margin-top:.6rem}
+
+.note{display:flex;flex-direction:column;align-items:center;gap:.5rem;max-width:25rem}
+.note .caps{color:var(--wine)}
+.note p{font-style:italic;color:var(--ink-soft)}
+
+.table-art{width:min(100%,330px);height:auto;color:var(--olive)}
+.body-text{max-width:26rem;font-size:1.15rem}
+.body-text + .body-text{margin-top:-.3rem}
+
+.photo .venham{font-size:clamp(3.1rem,14vw,4rem);margin-block:.2rem;padding-inline:.2em}
+.photo .caps{color:var(--olive)}
+
+.rsvp{
+  background:var(--paper-warm);
+  width:100%;
+  padding:3.2rem 1.4rem 3rem;
+  display:flex;flex-direction:column;align-items:center;gap:1.3rem;
+  position:relative;
+}
+.rsvp::before{content:"";position:absolute;inset:8px;border:1px solid rgba(107,48,56,.22);pointer-events:none}
+.rsvp > *{position:relative}
+.rsvp .sec-title{font-size:clamp(2.6rem,11vw,3.2rem)}
+.rsvp-form{width:100%;max-width:21rem;display:flex;flex-direction:column;align-items:center;gap:1.5rem;margin-top:.4rem}
+.qty{border:0;margin:0;padding:0;display:flex;flex-direction:column;align-items:center;gap:.9rem;width:100%}
+.qty legend{color:var(--olive);font-size:.68rem;padding:0;margin-bottom:.9rem;text-align:center;width:100%}
+.qty-opts{display:grid;grid-template-columns:repeat(6,1fr);gap:.45rem;width:100%}
+.qty-opts label{position:relative;cursor:pointer}
+.qty-opts input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.qty-opts span{
+  display:flex;align-items:center;justify-content:center;aspect-ratio:1;min-height:44px;
+  border:1px solid var(--olive-line);font-family:var(--f-display);font-size:1.15rem;color:var(--ink);
+  background:rgba(255,255,255,.25);
+  transition:background-color .45s var(--ease),color .45s var(--ease),border-color .45s var(--ease);
+}
+.qty-opts label:hover span{border-color:var(--wine)}
+.qty-opts input:checked + span{background:var(--wine);border-color:var(--wine);color:var(--paper)}
+.qty-opts input:focus-visible + span{outline:1px solid var(--wine);outline-offset:3px}
+.names{display:flex;flex-direction:column;gap:1.05rem;width:100%;text-align:left}
+.names .field{animation:fieldIn .7s cubic-bezier(.25,.1,.25,1) both}
+.field{display:flex;flex-direction:column;gap:.25rem;width:100%;text-align:left}
+.field label{font-family:var(--f-display);text-transform:uppercase;letter-spacing:.18em;font-size:.66rem;color:var(--olive)}
+.field label em{text-transform:none;letter-spacing:0;font-family:var(--f-body);font-size:.85rem}
+.field input,.field textarea{
+  font:inherit;font-size:1.15rem;color:var(--ink);
+  background:transparent;border:0;border-bottom:1px solid var(--olive-line);border-radius:0;
+  padding:.35rem 0 .4rem;outline:none;-webkit-appearance:none;appearance:none;width:100%;resize:vertical;
+  transition:border-color .4s;
+}
+.field input:focus,.field textarea:focus{border-bottom-color:var(--wine)}
+.field input[aria-invalid="true"]{border-bottom-color:var(--wine)}
+.field input::placeholder,.field textarea::placeholder{color:#9A9A86;font-style:italic}
+.form-error{color:var(--wine);font-style:italic;font-size:1rem;text-align:center}
+.btn.solid[disabled]{opacity:.6;cursor:progress}
+.rsvp-done{display:flex;flex-direction:column;align-items:center;gap:.7rem;outline:none;animation:fieldIn .9s cubic-bezier(.25,.1,.25,1) both}
+.done-title{font-size:3.4rem}
+.done-list{list-style:none;margin:.2rem 0 .4rem;padding:0;display:flex;flex-direction:column;gap:.2rem;font-family:var(--f-display);letter-spacing:.06em;font-size:1.15rem;color:var(--wine)}
+button.link{background:none;border-top:0;border-left:0;border-right:0;cursor:pointer;margin-top:.6rem}
+.cal{display:flex;flex-direction:column;align-items:center;gap:.5rem}
+.cal-label{color:var(--olive);font-size:.64rem}
+.cal-links{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:.4rem .7rem;color:var(--olive-line)}
+@keyframes fieldIn{from{opacity:0;transform:translate3d(0,10px,0)}to{opacity:1;transform:none}}
+.rsvp .small{font-size:.95rem;font-style:italic;color:var(--ink-soft);max-width:19rem}
+
+.quote{font-style:italic;font-size:clamp(1.3rem,5.2vw,1.55rem);line-height:1.45;max-width:22rem}
+.quote::before,.quote::after{color:var(--wine);font-family:var(--f-display);font-style:normal}
+.quote::before{content:"“"}
+.quote::after{content:"”"}
+.quote-calla{width:42px;height:auto;transform-origin:50% 100%;animation:sway 12s ease-in-out -5s infinite;will-change:transform}
+
+.closing{padding-bottom:3rem;gap:.6rem}
+.closing .with{font-style:italic;color:var(--ink-soft);font-size:1.1rem}
+.closing .names{font-size:clamp(3.2rem,15vw,4.2rem);padding-inline:.2em}
+.closing .cover-date{margin:.6rem 0 1.4rem}
+.closing .mono{margin:0 auto}
+
+footer{
+  text-align:center;padding-block:2rem 2.4rem;
+  padding-left:max(20px,env(safe-area-inset-left,0px));
+  padding-right:max(20px,env(safe-area-inset-right,0px));
+  color:var(--olive);font-size:.68rem;
+  border-top:1px solid rgba(106,106,83,.18);
+  max-width:var(--measure);margin:0 auto;
+}
+
+.reveal{transition:opacity 1.4s cubic-bezier(.25,.1,.25,1),transform 1.4s cubic-bezier(.25,.1,.25,1)}
+.reveal.wait{opacity:.25;transform:translate3d(0,18px,0);will-change:opacity,transform}
+
+@keyframes sway{0%,100%{transform:rotate(-.6deg)}50%{transform:rotate(.8deg)}}
+@keyframes breathe{0%,100%{opacity:1}50%{opacity:.55}}
+
+@media (min-width:720px){
+  body{font-size:1.2rem}
+  .env{width:28rem}
+  .card{padding:4rem 3rem 21rem}
+  .bouquet{width:250px;left:calc(50% - 125px)}
+  section.leaf{padding-block:6rem 1rem}
+  .details{padding:3.2rem 2.5rem 3rem}
+  .rsvp{padding:4rem 3rem 3.6rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01s!important;transition-delay:0s!important}
+  .reveal.wait{opacity:1;transform:none}
+}
+</style>
+
+</head>
+<body class="grain locked">
+<!-- ===================== ilustrações ===================== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+  <linearGradient id="spF" x1="0" y1="1" x2=".35" y2="0">
+    <stop offset="0" stop-color="#A3A982"/><stop offset=".25" stop-color="#DADDC4"/>
+    <stop offset=".55" stop-color="#F7F5EC"/><stop offset="1" stop-color="#FFFEFA"/>
+  </linearGradient>
+  <linearGradient id="spB" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#E2DECA"/><stop offset="1" stop-color="#F8F5EC"/>
+  </linearGradient>
+  <linearGradient id="spd" x1="0" y1="1" x2="0" y2="0">
+    <stop offset="0" stop-color="#C4A44C"/><stop offset="1" stop-color="#E8D488"/>
+  </linearGradient>
+  <linearGradient id="stm" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#5A5C44"/><stop offset=".5" stop-color="#80845F"/><stop offset="1" stop-color="#52543D"/>
+  </linearGradient>
+  <linearGradient id="lf" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#8D9170"/><stop offset="1" stop-color="#5B5D45"/>
+  </linearGradient>
+  <radialGradient id="wax" cx="40%" cy="35%" r="70%">
+    <stop offset="0" stop-color="#8A3F49"/><stop offset=".6" stop-color="#6B3038"/><stop offset="1" stop-color="#4E2128"/>
+  </radialGradient>
+  <filter id="sealEdge"><feTurbulence type="fractalNoise" baseFrequency=".08" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="6"/></filter>
+  <pattern id="liner" width="60" height="76" patternUnits="userSpaceOnUse">
+    <rect width="60" height="76" fill="#5D6147"/>
+    <g fill="none" stroke="#C9CBAE" stroke-opacity=".28" stroke-width=".7" stroke-linecap="round">
+      <path d="M14 30C14 22 19 15 26 10C30 8 34 6 38 6C36 9 35 11 34 14C32 19 30 22 28 24C24 28 19 30 14 30Z"/>
+      <path d="M14 30C17 33 24 32 28 24C27 30 25 36 23 42C21 47 19 50 17 53C16 47 15 40 14 30Z"/>
+      <path d="M17 53C17 62 17 70 16 76"/>
+      <path d="M44 70C40 64 38 56 40 48C42 54 44 62 44 70Z"/>
+    </g>
+  </pattern>
+
+  <!-- copo-de-leite naturalista: espata marfim em aquarela, borda enrolada, espádice amarela -->
+  <symbol id="calla" viewBox="0 0 100 260" overflow="visible">
+    <path d="M40.4 148C41.6 182 41 222 39.2 260H43.2C44.8 222 45.4 182 44 148Z" fill="url(#stm)"/>
+    <g stroke="#55573F" stroke-width=".7" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M29 66C30 46 44 28 62 17C74 10 86 6 97 4C93 8 89.5 13 86.5 20C83 29 79 38 74 46C62 58 44 66 29 66Z" fill="url(#spB)"/>
+      <path d="M97 4C94 2.2 90 2.8 87.5 5C91 5 94 4.8 97 4Z" fill="#EDE9DA"/>
+      <path d="M47 76C46.5 64 48.5 52 52.5 42C54 40 56 40.5 56.4 42.5C55.6 55 53.8 67 51.5 78Z" fill="url(#spd)" stroke="#A88C3E" stroke-width=".5"/>
+      <path d="M42.2 150C38.5 136 36 118 36 102C36 90 33.5 78 29 66C40 74 60 70 74 46C71 62 66.5 78 62 94C56 116 48.5 134 42.2 150Z" fill="url(#spF)"/>
+      <path d="M29 66C40 74 60 70 74 46C62 64 42 70 31.5 70.5Z" fill="#E9E6D6" stroke-opacity=".6"/>
+      <path d="M40 140C37.5 122 37.5 104 39 88" fill="none" stroke-opacity=".2"/>
+      <path d="M45 136C46 116 50 98 56 82" fill="none" stroke-opacity=".16"/>
+      <path d="M50 128C54 112 58.5 98 64 84" fill="none" stroke-opacity=".12"/>
+    </g>
+  </symbol>
+  <symbol id="leaf" viewBox="0 0 80 260" overflow="visible">
+    <path d="M38.5 128C39.5 170 40 214 40.5 260" fill="none" stroke="#5B5D45" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M38.5 130C20 114 9 86 13 54C16 30 28 12 44 0C51 22 57 50 55 80C53 102 46 118 38.5 130Z" fill="url(#lf)" stroke="#4F5140" stroke-width=".7"/>
+    <path d="M38.5 128C40 96 41 56 44 2" fill="none" stroke="#D3D5BC" stroke-opacity=".55" stroke-width=".8"/>
+    <path d="M39.5 104C31 96 22 86 17 72M40 80C33 70 27 60 22 46M41.5 56C38.5 46 37 36 35 26M40 104C46 96 51 88 53 76M41 78C46 70 50 60 53 48" fill="none" stroke="#D3D5BC" stroke-opacity=".3" stroke-width=".6"/>
+  </symbol>
+  <!-- buquê amarrado com fita vinho -->
+  <symbol id="bouquet" viewBox="40 50 180 250" overflow="visible">
+    <g transform="translate(130 236) rotate(-38) scale(.62) translate(-40 -200)"><use href="#leaf" width="80" height="260"/></g>
+    <g transform="translate(130 236) rotate(34) scale(-.56 .56) translate(-40 -200)"><use href="#leaf" width="80" height="260"/></g>
+    <g transform="translate(130 236) rotate(-22) scale(.8) translate(-42 -200)"><use href="#calla" width="100" height="260"/></g>
+    <g transform="translate(130 236) rotate(22) scale(-.74 .74) translate(-42 -200)"><use href="#calla" width="100" height="260"/></g>
+    <g transform="translate(130 236) rotate(-3) scale(.9) translate(-42 -200)"><use href="#calla" width="100" height="260"/></g>
+    <g fill="none" stroke="#6B3038" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M120 236C126 238 134 238 140 236"/>
+      <path d="M130 236C122 226 108 226 108 232C108 240 122 240 130 236Z" fill="#6B3038" fill-opacity=".12"/>
+      <path d="M130 236C138 226 152 226 152 232C152 240 138 240 130 236Z" fill="#6B3038" fill-opacity=".12"/>
+      <path d="M129 237C124 248 118 260 110 270M131 237C136 250 141 262 150 274"/>
+    </g>
+    <circle cx="130" cy="236" r="2.6" fill="#6B3038"/>
+  </symbol>
+  <!-- monograma D · M com um copo-de-leite entre as letras -->
+  <symbol id="mono" viewBox="0 0 120 80">
+    <text x="34" y="56" text-anchor="middle" font-family="Pinyon Script, cursive" font-size="50" fill="#6B3038">D</text>
+    <text x="88" y="62" text-anchor="middle" font-family="Pinyon Script, cursive" font-size="50" fill="#6B3038">M</text>
+    <g transform="translate(60 76) rotate(14) scale(.27) translate(-41 -260)"><use href="#calla" width="100" height="260"/></g>
+  </symbol>
+</defs>
+</svg>
+
+<!-- ===================== ENVELOPE ===================== -->
+<section class="stage" id="stage" aria-label="Envelope do convite">
+  <div class="stage-head">
+    <span class="names">Daniel &amp; Maria</span>
+    <span class="caps">19 · 12 · 2026</span>
+  </div>
+
+  <div class="env" id="env">
+    <div class="env-shadow" aria-hidden="true"></div>
+    <div class="env-back">
+      <svg viewBox="0 0 300 200" preserveAspectRatio="none" aria-hidden="true"><rect width="300" height="200" fill="url(#liner)"/></svg>
+    </div>
+
+    <div class="env-letter grain" aria-hidden="true">
+      <svg class="mono"><use href="#mono"/></svg>
+      <span class="lead">Vamos nos</span>
+      <span class="script">Casar!</span>
+    </div>
+
+    <svg class="env-front" viewBox="0 0 300 200" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 0L150 114L300 0V200H0Z" fill="#7A7E5C"/>
+      <path d="M0 200L132 100M300 200L168 100" stroke="#5F6347" stroke-opacity=".45" stroke-width=".8" fill="none"/>
+      <path d="M0 0L150 114L300 0" stroke="#5F6347" stroke-opacity=".35" stroke-width=".8" fill="none"/>
+    </svg>
+
+    <div class="env-flap" aria-hidden="true">
+      <svg class="face outside" viewBox="0 0 300 120" preserveAspectRatio="none">
+        <path d="M0 0H300L150 120Z" fill="#828663"/>
+        <path d="M0 0L150 120L300 0" stroke="#5F6347" stroke-opacity=".5" stroke-width=".9" fill="none"/>
+      </svg>
+      <svg class="face inside" viewBox="0 0 300 120" preserveAspectRatio="none">
+        <path d="M0 120H300L150 0Z" fill="url(#liner)"/>
+        <path d="M0 120L150 0L300 120" stroke="#4F5140" stroke-width=".9" fill="none"/>
+      </svg>
+    </div>
+
+    <button class="seal" id="seal" type="button" aria-label="Romper o lacre e abrir o convite">
+      <svg viewBox="0 0 80 80" aria-hidden="true">
+        <circle cx="40" cy="40" r="34" fill="url(#wax)" filter="url(#sealEdge)"/>
+        <circle cx="40" cy="40" r="25" fill="none" stroke="#4A1F25" stroke-opacity=".55" stroke-width="2"/>
+        <circle cx="40" cy="40" r="23.5" fill="none" stroke="#A3646D" stroke-opacity=".55" stroke-width=".8"/>
+        <text x="40" y="48" text-anchor="middle" font-family="Pinyon Script, cursive" font-size="22" fill="#B8787F">D<tspan font-size="13" dx="2" dy="-2">&amp;</tspan><tspan dx="2" dy="2">M</tspan></text>
+      </svg>
+    </button>
+  </div>
+
+  <div class="hint">
+    <em>Toque no lacre para abrir</em>
+  </div>
+</section>
+
+<!-- ===================== CONVITE ===================== -->
+<div class="invite" id="invite">
+  <header class="cover" id="topo">
+    <article class="card grain" aria-label="Convite de casamento de Daniel e Maria">
+      <div class="wash" aria-hidden="true"></div>
+      <svg class="mono" role="img" aria-label="D e M"><use href="#mono"/></svg>
+      <p class="caps cover-date">19 · 12 · 2026</p>
+      <h1 class="cover-title">
+        <span class="lead">Vamos nos</span>
+        <span class="script">Casar!</span>
+      </h1>
+      <div class="rule" aria-hidden="true"></div>
+      <p class="cover-text">E queremos dividir esse momento tão especial com vocês.</p>
+      <a class="btn" href="#cerimonia" id="detalhes">Ver detalhes <span class="down" aria-hidden="true"></span></a>
+      <svg class="bouquet" viewBox="0 0 180 250" aria-hidden="true"><use href="#bouquet" width="180" height="250"/></svg>
+    </article>
+  </header>
+
+  <main>
+    <!-- CERIMÔNIA -->
+    <section class="leaf reveal" id="cerimonia" aria-labelledby="t-cerimonia">
+      <p class="caps eyebrow">Com alegria, convidamos para a</p>
+      <h2 class="script sec-title" id="t-cerimonia">Cerimônia Civil</h2>
+      <div class="details">
+        <div class="when">
+          <span class="caps eyebrow">Sábado</span>
+          <span class="day">19 de dezembro de 2026</span>
+          <span class="hour">às 10 horas</span>
+        </div>
+        <div class="hair" aria-hidden="true"></div>
+        <div class="where">
+          <span class="place" data-cfg="cartorio.nome">Cartório do Bacacheri</span>
+          <span class="addr" data-cfg="cartorio.endereco" hidden></span>
+          <span class="addr" data-cfg="cartorio.cidade">Curitiba — PR</span>
+        </div>
+        <div class="actions">
+          <a class="btn" id="mapa-cartorio" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&amp;query=Cart%C3%B3rio%20Distrital%20do%20Bacacheri%2C%20Curitiba%20-%20PR">
+            Ver no mapa <span class="arrow" aria-hidden="true"></span>
+          </a>
+          <div class="cal">
+            <span class="caps cal-label">Salvar na agenda</span>
+            <div class="cal-links">
+              <a class="link" id="cal-google" target="_blank" rel="noopener" href="#">Google Agenda</a>
+              <span aria-hidden="true">·</span>
+              <a class="link" id="cal-ics" href="#">iPhone / Outlook</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="note">
+        <span class="caps">Importante</span>
+        <p>Pedimos que cheguem com 15 minutos de antecedência para começarmos esse momento juntos e com tranquilidade.</p>
+      </div>
+      <div class="divider" aria-hidden="true"><i></i></div>
+    </section>
+
+    <!-- DEPOIS DO SIM -->
+    <section class="leaf reveal" id="almoco" aria-labelledby="t-almoco">
+      <h2 class="script sec-title" id="t-almoco">Depois do sim…</h2>
+      <svg class="table-art" viewBox="0 0 320 150" role="img" aria-label="Ilustração de uma mesa posta para o almoço, com copos-de-leite no centro">
+        <g fill="none" stroke="currentColor" stroke-width=".9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 104H306"/>
+          <path d="M14 104C14 118 16 128 20 138C40 134 52 140 70 136C92 141 108 134 130 139C150 135 170 141 190 136C212 141 230 134 250 139C270 135 288 140 300 137C304 128 306 116 306 104" fill="#F8F5EC" stroke-opacity=".75"/>
+          <path d="M40 106C42 118 44 128 46 136M110 106C110 118 111 128 112 138M210 106C210 118 209 128 208 138M280 106C278 118 276 128 274 137" stroke-opacity=".25"/>
+          <ellipse cx="78" cy="100" rx="34" ry="6.5" fill="#FBF8F0"/>
+          <ellipse cx="78" cy="99" rx="22" ry="4" stroke-opacity=".55"/>
+          <ellipse cx="242" cy="100" rx="34" ry="6.5" fill="#FBF8F0"/>
+          <ellipse cx="242" cy="99" rx="22" ry="4" stroke-opacity=".55"/>
+          <path d="M38 101V92M118 101V90M202 101V92M282 101V90" stroke-opacity=".6"/>
+          <path d="M120 68C119 78 122 84 128 85C134 84 137 78 136 68Z" fill="#FBF8F0"/>
+          <path d="M120.6 76C121.5 81 124 84 128 84.4C132 84 134.5 81 135.4 76Z" fill="#6B3038" stroke="none" fill-opacity=".85"/>
+          <path d="M128 85V100M122 101H134"/>
+          <path d="M186 68C185 78 188 84 194 85C200 84 203 78 202 68Z" fill="#FBF8F0"/>
+          <path d="M186.6 76C187.5 81 190 84 194 84.4C198 84 200.5 81 201.4 76Z" fill="#6B3038" stroke="none" fill-opacity=".85"/>
+          <path d="M194 85V100M188 101H200"/>
+          <path d="M100 96C102 90 106 86 110 84M104 97C105 92 107 88 110 84" stroke-opacity=".7"/>
+        </g>
+        <g transform="translate(159 72) rotate(-10) scale(.2) translate(-41 -260)"><use href="#calla" width="100" height="260"/></g>
+        <g transform="translate(162 72) rotate(14) scale(-.17 .17) translate(-41 -260)"><use href="#calla" width="100" height="260"/></g>
+        <path d="M154 100C150 94 150 84 156 78C157 75 157 72 156.5 69H164.5C164 72 164 75 165 78C171 84 171 94 167 100Z" fill="#EEEADC" stroke="#6A6A53" stroke-width=".9" stroke-linejoin="round"/>
+        <circle cx="100" cy="98" r="3" fill="#6B3038"/>
+        <circle cx="105" cy="99" r="3" fill="#71323B"/>
+      </svg>
+      <p class="body-text">Queremos continuar celebrando ao lado de quem amamos.</p>
+      <p class="body-text muted">Após a cerimônia, esperamos vocês para um almoço em nossa casa.</p>
+      <div class="where">
+        <span class="place" data-cfg="almoco.endereco">Rua Felisbino Passos, 140</span>
+        <span class="addr" data-cfg="almoco.bairro">Tingui — Curitiba/PR</span>
+      </div>
+      <a class="btn" id="mapa-almoco" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Felisbino%20Passos%2C%20140%2C%20Tingui%2C%20Curitiba%20-%20PR">
+        Ver no mapa <span class="arrow" aria-hidden="true"></span>
+      </a>
+      <div class="divider" aria-hidden="true"><i></i></div>
+    </section>
+
+    <!-- FOTOGRAFIA -->
+    <section class="leaf photo reveal" aria-labelledby="t-aviso">
+      <h2 class="caps" id="t-aviso">Um pequeno aviso</h2>
+      <p class="body-text muted">Teremos fotógrafo para registrar esse dia.</p>
+      <p class="script venham">Então, venham lindos!</p>
+      <p class="body-text">Queremos guardar não apenas esse momento, mas também a lembrança de ter vocês fazendo parte dele para sempre.</p>
+      <div class="divider" aria-hidden="true"><i></i></div>
+    </section>
+
+    <!-- CONFIRMAÇÃO -->
+    <section class="leaf reveal" id="confirmar" aria-labelledby="t-rsvp">
+      <div class="rsvp grain">
+        <span class="caps eyebrow">RSVP</span>
+        <h2 class="script sec-title" id="t-rsvp">Confirme sua presença</h2>
+        <p class="body-text muted">Sua presença torna esse dia ainda mais especial.</p>
+
+        <form class="rsvp-form" id="rsvp-form" novalidate>
+          <fieldset class="qty">
+            <legend class="caps">Quantas pessoas você vai confirmar?</legend>
+            <div class="qty-opts" role="radiogroup">
+              <label><input type="radio" name="qtd" value="1"><span>1</span></label>
+              <label><input type="radio" name="qtd" value="2"><span>2</span></label>
+              <label><input type="radio" name="qtd" value="3"><span>3</span></label>
+              <label><input type="radio" name="qtd" value="4"><span>4</span></label>
+              <label><input type="radio" name="qtd" value="5"><span>5</span></label>
+              <label><input type="radio" name="qtd" value="6"><span>6</span></label>
+            </div>
+          </fieldset>
+
+          <div class="names" id="rsvp-names" aria-live="polite"></div>
+
+          <div class="field" id="rsvp-recado-wrap" hidden>
+            <label for="rsvp-recado">Recado para os noivos <em>(opcional)</em></label>
+            <textarea id="rsvp-recado" rows="2" maxlength="500" placeholder="Restrição alimentar, carinho, o que quiser"></textarea>
+          </div>
+
+          <p class="form-error" id="rsvp-erro" role="alert" hidden></p>
+
+          <button class="btn solid" id="rsvp-enviar" type="submit" hidden>Confirmar presença</button>
+        </form>
+
+        <div class="rsvp-done" id="rsvp-ok" hidden tabindex="-1">
+          <p class="script done-title">Obrigado!</p>
+          <p class="body-text">Presença confirmada para</p>
+          <ul class="done-list" id="rsvp-ok-lista"></ul>
+          <p class="small">Mal podemos esperar para celebrar com vocês.</p>
+          <button class="link" type="button" id="rsvp-mais">Confirmar outras pessoas</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRASE -->
+    <section class="leaf reveal" aria-label="Frase">
+      <svg class="quote-calla" viewBox="0 0 100 260" aria-hidden="true"><use href="#calla" width="100" height="260"/></svg>
+      <p class="quote">Pessoas especiais tornam momentos comuns em lembranças extraordinárias.</p>
+    </section>
+
+    <!-- ENCERRAMENTO -->
+    <section class="leaf closing reveal" aria-label="Encerramento">
+      <p class="with">Com carinho,</p>
+      <p class="script names">Daniel e Maria</p>
+      <p class="caps cover-date">19 · 12 · 2026</p>
+      <svg class="mono" aria-hidden="true"><use href="#mono"/></svg>
+    </section>
+  </main>
+
+  <footer class="caps">Curitiba · Paraná · Dezembro de 2026</footer>
+</div>
+
+<script>
+/* =========================================================
+   CONFIGURAÇÃO — edite aqui
+   ========================================================= */
+const CONFIG = {
+  // Endereço do "App da Web" do Google Apps Script (veja LEIA-ME.md, passo 2).
+  // Termina em /exec. Enquanto estiver vazio, o formulário avisa que ainda não está ativo.
+  planilhaUrl: "",
+
+  cartorio: {
+    nome: "Cartório do Bacacheri",
+    endereco: "",                 // ← preencher com rua e número confirmados
+    cidade: "Curitiba — PR",
+    mapsBusca: "Cartório Distrital do Bacacheri, Curitiba - PR"
+  },
+  almoco: {
+    endereco: "Rua Felisbino Passos, 140",
+    bairro: "Tingui — Curitiba/PR",
+    mapsBusca: "Rua Felisbino Passos, 140, Tingui, Curitiba - PR"
+  },
+  agenda: {
+    titulo: "Casamento Daniel & Maria",
+    inicio: "20261219T100000",    // horário de Brasília
+    fim:    "20261219T150000",
+    fuso:   "America/Sao_Paulo",
+    descricao: "Cerimônia civil às 10h no Cartório do Bacacheri (chegar 15 min antes). Depois, almoço na Rua Felisbino Passos, 140 - Tingui."
+  }
+};
+/* ========================================================= */
+
+(function(){
+  const $ = id => document.getElementById(id);
+  const reduz = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const maps = q => "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
+  const get = path => path.split(".").reduce((o,k)=>o && o[k], CONFIG);
+
+  /* ---------- textos e mapas ---------- */
+  document.querySelectorAll("[data-cfg]").forEach(el=>{
+    const v = get(el.dataset.cfg);
+    if (v) { el.textContent = v; el.hidden = false; } else { el.hidden = true; }
+  });
+  const c = CONFIG.cartorio;
+  const localCartorio = c.endereco ? `${c.nome}, ${c.endereco}, Curitiba - PR` : `${c.nome}, Curitiba - PR`;
+  $("mapa-cartorio").href = maps(c.endereco ? localCartorio : c.mapsBusca);
+  $("mapa-almoco").href = maps(CONFIG.almoco.mapsBusca);
+
+  /* ---------- agenda ---------- */
+  const ag = CONFIG.agenda;
+  $("cal-google").href = "https://calendar.google.com/calendar/render?action=TEMPLATE"
+    + "&text=" + encodeURIComponent(ag.titulo)
+    + "&dates=" + ag.inicio + "/" + ag.fim
+    + "&ctz=" + encodeURIComponent(ag.fuso)
+    + "&location=" + encodeURIComponent(localCartorio)
+    + "&details=" + encodeURIComponent(ag.descricao);
+  $("cal-ics").addEventListener("click", e=>{
+    e.preventDefault();
+    const esc = t => t.replace(/[,;\\]/g, m => "\\" + m);
+    const ics = [
+      "BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Daniel e Maria//Convite//PT","CALSCALE:GREGORIAN","METHOD:PUBLISH",
+      "BEGIN:VTIMEZONE","TZID:America/Sao_Paulo","BEGIN:STANDARD","DTSTART:19700101T000000",
+      "TZOFFSETFROM:-0300","TZOFFSETTO:-0300","TZNAME:-03","END:STANDARD","END:VTIMEZONE",
+      "BEGIN:VEVENT",
+      "UID:casamento-daniel-maria-20261219@convite",
+      "DTSTAMP:" + new Date().toISOString().replace(/[-:]/g,"").replace(/\.\d+/,""),
+      "DTSTART;TZID=America/Sao_Paulo:" + ag.inicio,
+      "DTEND;TZID=America/Sao_Paulo:" + ag.fim,
+      "SUMMARY:" + esc(ag.titulo),
+      "LOCATION:" + esc(localCartorio),
+      "DESCRIPTION:" + esc(ag.descricao),
+      "BEGIN:VALARM","TRIGGER:-P1D","ACTION:DISPLAY","DESCRIPTION:Amanhã é o casamento de Daniel & Maria","END:VALARM",
+      "END:VEVENT","END:VCALENDAR"
+    ].join("\r\n");
+    const url = URL.createObjectURL(new Blob([ics], {type:"text/calendar;charset=utf-8"}));
+    const a = document.createElement("a");
+    a.href = url; a.download = "casamento-daniel-maria.ics";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url), 4000);
+  });
+
+  /* ---------- confirmação de presença ---------- */
+  const form = $("rsvp-form"), boxNomes = $("rsvp-names"), btn = $("rsvp-enviar"),
+        erro = $("rsvp-erro"), recadoWrap = $("rsvp-recado-wrap");
+  const ordinal = n => n === 1 ? "Seu nome" : `Nome da ${n}ª pessoa`;
+
+  function montarCampos(qtd){
+    const atuais = [...boxNomes.querySelectorAll("input")].map(i=>i.value);
+    boxNomes.innerHTML = "";
+    for (let n = 1; n <= qtd; n++){
+      const f = document.createElement("div");
+      f.className = "field";
+      f.style.animationDelay = (n-1)*90 + "ms";
+      f.innerHTML = `<label for="rsvp-nome-${n}">${ordinal(n)}</label>
+        <input id="rsvp-nome-${n}" type="text" autocomplete="${n===1?"name":"off"}" autocapitalize="words"
+               maxlength="80" placeholder="Nome e sobrenome" required>`;
+      boxNomes.appendChild(f);
+      if (atuais[n-1]) f.querySelector("input").value = atuais[n-1];
+    }
+    recadoWrap.hidden = false; btn.hidden = false; erro.hidden = true;
+    btn.textContent = qtd === 1 ? "Confirmar presença" : `Confirmar ${qtd} presenças`;
+  }
+  form.querySelectorAll('input[name="qtd"]').forEach(r=>{
+    r.addEventListener("change", ()=>{
+      montarCampos(+r.value);
+      const primeiro = boxNomes.querySelector("input");
+      if (primeiro && !primeiro.value) setTimeout(()=>primeiro.focus({preventScroll:true}), 250);
+    });
+  });
+
+  function mostrarErro(msg){ erro.textContent = msg; erro.hidden = false; }
+
+  form.addEventListener("submit", async e=>{
+    e.preventDefault();
+    erro.hidden = true;
+    const inputs = [...boxNomes.querySelectorAll("input")];
+    if (!inputs.length){ mostrarErro("Escolha quantas pessoas você vai confirmar."); return; }
+    let ok = true;
+    inputs.forEach(i=>{
+      const vazio = i.value.trim().length < 2;
+      i.setAttribute("aria-invalid", vazio ? "true" : "false");
+      if (vazio) ok = false;
+    });
+    if (!ok){ mostrarErro("Preencha o nome de cada pessoa."); inputs.find(i=>i.getAttribute("aria-invalid")==="true").focus(); return; }
+    if (!CONFIG.planilhaUrl){ mostrarErro("A confirmação ainda não está ativa. Tente novamente mais tarde."); return; }
+
+    const nomes = inputs.map(i=>i.value.trim().replace(/\s+/g," "));
+    const dados = { nomes, recado: $("rsvp-recado").value.trim(), origem: location.href };
+
+    btn.disabled = true; btn.textContent = "Enviando…";
+    try{
+      // text/plain evita a verificação prévia do navegador; o Apps Script lê o JSON do corpo
+      await fetch(CONFIG.planilhaUrl, { method:"POST", mode:"no-cors", body: JSON.stringify(dados),
+                                         headers:{ "Content-Type":"text/plain;charset=utf-8" } });
+      try{ localStorage.setItem("rsvp-dm", JSON.stringify(nomes)); }catch(_){}
+      mostrarConfirmado(nomes);
+    }catch(_){
+      mostrarErro("Não conseguimos enviar agora. Confira sua internet e tente de novo.");
+      btn.disabled = false; btn.textContent = nomes.length === 1 ? "Confirmar presença" : `Confirmar ${nomes.length} presenças`;
+    }
+  });
+
+  function mostrarConfirmado(nomes){
+    const lista = $("rsvp-ok-lista"); lista.innerHTML = "";
+    nomes.forEach(n=>{ const li = document.createElement("li"); li.textContent = n; lista.appendChild(li); });
+    form.hidden = true; $("rsvp-ok").hidden = false;
+    $("rsvp-ok").focus({preventScroll:true});
+  }
+  $("rsvp-mais").addEventListener("click", ()=>{
+    form.reset(); boxNomes.innerHTML = ""; recadoWrap.hidden = true; btn.hidden = true; btn.disabled = false;
+    $("rsvp-ok").hidden = true; form.hidden = false;
+  });
+  try{
+    const salvo = JSON.parse(localStorage.getItem("rsvp-dm") || "null");
+    if (Array.isArray(salvo) && salvo.length) mostrarConfirmado(salvo);
+  }catch(_){}
+
+  /* ---------- "Ver detalhes": rolagem nativa (mais suave no celular) ---------- */
+  $("detalhes").addEventListener("click", e=>{
+    e.preventDefault();
+    $("cerimonia").scrollIntoView({ behavior: reduz ? "auto" : "smooth", block:"start" });
+  });
+
+  /* ---------- entradas suaves ao rolar ---------- */
+  if ("IntersectionObserver" in window && !reduz){
+    const io = new IntersectionObserver(entries=>{
+      entries.forEach(en=>{ if(en.isIntersecting){
+        const el = en.target;
+        requestAnimationFrame(()=>el.classList.remove("wait"));
+        el.addEventListener("transitionend", ()=>{ el.style.willChange = "auto"; }, {once:true});
+        io.unobserve(el);
+      }});
+    },{threshold:.1, rootMargin:"0px 0px -8% 0px"});
+    document.querySelectorAll(".reveal").forEach(el=>{
+      if (el.getBoundingClientRect().top > window.innerHeight * .9) { el.classList.add("wait"); io.observe(el); }
+    });
+  }
+
+  /* ---------- abrir o envelope ---------- */
+  const stage = $("stage"), env = $("env");
+  let aberto = false;
+  function abrir(){
+    if (aberto) return; aberto = true;
+    stage.classList.add("opening");
+    requestAnimationFrame(()=> env.classList.add("open"));
+    setTimeout(()=>{
+      window.scrollTo(0,0);
+      document.body.classList.remove("locked");
+      stage.classList.add("leaving");
+      stage.addEventListener("transitionend", ev=>{ if (ev.propertyName === "opacity") stage.hidden = true; });
+      setTimeout(()=>{ stage.hidden = true; }, 1600);
+    }, reduz ? 0 : 2750);
+  }
+  $("seal").addEventListener("click", e=>{ e.stopPropagation(); abrir(); });
+  env.addEventListener("click", abrir);
+  // link direto para a confirmação (…/#confirmar) pula o envelope
+  if (location.hash === "#confirmar"){
+    stage.hidden = true; document.body.classList.remove("locked"); aberto = true;
+    setTimeout(()=>$("confirmar").scrollIntoView(), 50);
+  }
+})();
+</script>
+
+</body>
+</html>
